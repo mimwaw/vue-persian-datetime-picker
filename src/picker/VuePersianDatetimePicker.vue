@@ -1343,11 +1343,17 @@ export default {
     },
     nextMonth() {
       this.date = this.date.clone().xAdd(1, 'month')
-      this.$emit('changeSlide', this.date)
+      this.$emit('changeSlide', {
+        year: this.date.clone().xYear(),
+        month: this.date.clone().xMonth() + 1
+      })
     },
     prevMonth() {
       this.date = this.date.clone().xAdd(-1, 'month')
-      this.$emit('changeSlide', this.date)
+      this.$emit('changeSlide', {
+        year: this.date.clone().xYear(),
+        month: this.date.clone().xMonth() + 1
+      })
     },
     selectDay(day) {
       if (!day.date || day.disabled) return
@@ -1389,7 +1395,10 @@ export default {
     selectMonth(month) {
       if (month.disabled) return
       this.date = this.date.clone().xMonth(month.xMonth())
-      this.$emit('changeSlide', this.date)
+      this.$emit('changeSlide', {
+        year: this.date.clone().xYear(),
+        month: month.xMonth() + 1
+      })
       this.nextStep()
     },
     setTime(v, k) {
