@@ -154,7 +154,7 @@
                     <div
                       :key="date.xMonth()"
                       class="vpd-month-label"
-                      @click="goStep('m')"
+                      @click="goStep('y')"
                     >
                       <slot name="month-name" v-bind="{ vm, date, color }">
                         <span
