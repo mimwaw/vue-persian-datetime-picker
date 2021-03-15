@@ -1525,6 +1525,11 @@ export default {
         this.output = []
         this.$forceUpdate()
       }
+
+      this.$emit('changeSlide', {
+        year: this.date.clone().xYear(),
+        month: this.date.clone().xMonth() + 1
+      })
     },
     goToday() {
       let now = this.core.moment()
