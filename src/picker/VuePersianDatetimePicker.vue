@@ -1470,6 +1470,11 @@ export default {
         this.$emit('input', this.outputValue[0])
         this.$emit('change', selected[0].clone())
       }
+
+      this.$emit('changeSlide', {
+        year: this.date.clone().xYear(),
+        month: this.date.clone().xMonth() + 1
+      })
     },
     updateDates(payload) {
       if (this.isDataArray && !payload) payload = []
