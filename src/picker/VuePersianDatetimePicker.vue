@@ -1385,11 +1385,19 @@ export default {
       } else {
         this.selectedDates = [date.clone()]
       }
+      this.$emit('changeSlide', {
+        year: this.date.clone().xYear(),
+        month: month.xMonth() + 1
+      })
       this.nextStep()
     },
     selectYear(year) {
       if (year.disabled) return
       this.date = this.date.clone().xYear(year.xYear())
+      this.$emit('changeSlide', {
+        year: this.date.clone().xYear(),
+        month: month.xMonth() + 1
+      })
       this.nextStep()
     },
     selectMonth(month) {
