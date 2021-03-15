@@ -1387,7 +1387,7 @@ export default {
       }
       this.$emit('changeSlide', {
         year: this.date.clone().xYear(),
-        month: month.xMonth() + 1
+        month: this.date.clone().xMonth() + 1
       })
       this.nextStep()
     },
@@ -1396,7 +1396,7 @@ export default {
       this.date = this.date.clone().xYear(year.xYear())
       this.$emit('changeSlide', {
         year: this.date.clone().xYear(),
-        month: month.xMonth() + 1
+        month: this.date.clone().xMonth() + 1
       })
       this.nextStep()
     },
