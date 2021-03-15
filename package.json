@@ -26,8 +26,7 @@
     "lint": "eslint --fix --ext .js,.vue src"
   },
   "dependencies": {
-    "moment-jalaali": "^0.9.2",
-    "vue-persian-datetime-picker": "mimwaw/vue-persian-datetime-picker"
+    "moment-jalaali": "^0.9.2"
   },
   "repository": {
     "type": "git",
