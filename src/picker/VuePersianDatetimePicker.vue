@@ -124,20 +124,6 @@
                 <div :class="['vpd-controls', directionClassDate]">
                   <button
                     type="button"
-                    class="vpd-next"
-                    :title="lang.nextMonth"
-                    :disabled="nextMonthDisabled"
-                    @click="nextMonth"
-                  >
-                    <arrow
-                      width="10"
-                      fill="#000"
-                      direction="right"
-                      style="vertical-align: middle"
-                    />
-                  </button>
-                  <button
-                    type="button"
                     class="vpd-prev"
                     :title="lang.prevMonth"
                     :disabled="prevMonthDisabled"
@@ -145,7 +131,7 @@
                   >
                     <arrow
                       width="10"
-                      fill="#000"
+                      fill="currentColor"
                       direction="left"
                       style="vertical-align: middle"
                     />
@@ -166,6 +152,20 @@
                       </slot>
                     </div>
                   </transition>
+                  <button
+                    type="button"
+                    class="vpd-next"
+                    :title="lang.nextMonth"
+                    :disabled="nextMonthDisabled"
+                    @click="nextMonth"
+                  >
+                    <arrow
+                      width="10"
+                      fill="currentColor"
+                      direction="right"
+                      style="vertical-align: middle"
+                    />
+                  </button>
                 </div>
                 <div
                   class="vpd-clearfix"
