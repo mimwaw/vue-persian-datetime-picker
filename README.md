@@ -6,6 +6,8 @@
 
 See documentation and demo at [vue-persian-datetime-picker](https://talkhabi.github.io/vue-persian-datetime-picker)
 
+If you are using vuejs 3, please refer to [this repository](https://github.com/talkhabi/vue3-persian-datetime-picker).
+
 
 ## Installation
 ### browser
@@ -120,6 +122,27 @@ This project is licensed under the MIT License
 
 
 ## Change log
+
+### 2.9.0 (2021-09-27)
+ * Feat: [Added simple-mode](https://talkhabi.github.io/vue-persian-datetime-picker/#/simple-mode)
+ * Feat: [Added `input-attrs`](https://github.com/talkhabi/vue-persian-datetime-picker/issues/170)
+ * Feat: [Added `@next-month` and `@prev-month` events](https://github.com/talkhabi/vue-persian-datetime-picker/issues/176)
+ * Feat: Added `@year-change` and `@month-change` events
+ * Fixed: [Mouse wheel in Firefox](https://github.com/talkhabi/vue-persian-datetime-picker/issues/174)
+ * Fixed: Prevent selected dates from being reset
+
+### 2.8.0 (2021-08-01)
+ * Feat: [Added ability to control route in show/close action](https://talkhabi.github.io/vue-persian-datetime-picker/#/use-router)
+ * Fixed Date change animation and transition
+
+### 2.7.0 (2021-07-23)
+ * Fixed [moment.parseZone](https://github.com/talkhabi/vue-persian-datetime-picker/issues/156)
+ * Fixed Unwanted change of date when using `auto-submit` and `multiple` together
+ * Feat: [Added slots for next-month and prev-month button](https://github.com/talkhabi/vue-persian-datetime-picker/issues/147)
+ * Feat: [Ability to change the time using the keyboard](https://github.com/talkhabi/vue-persian-datetime-picker/issues/159)
+
+### 2.6.1 (2021-05-17)
+ * Fixed [year-month](https://github.com/talkhabi/vue-persian-datetime-picker/issues/150)
 
 ### 2.6.0 (2021-02-05)
  * Added [multiple selection](https://talkhabi.github.io/vue-persian-datetime-picker/#/multiple) (for type `date` only)

@@ -1,6 +1,7 @@
 /*global getYear*/
 /*eslint no-undef: ["error", { "typeof": true }] */
 
+import momentBase from 'moment'
 import moment from 'moment-jalaali'
 import fa from './moment.locale.fa'
 import utils from './utils'
@@ -44,7 +45,10 @@ const localesConfig = {
       cancel: 'انصراف',
       now: 'اکنون',
       nextMonth: 'ماه بعد',
-      prevMonth: 'ماه قبل'
+      prevMonth: 'ماه قبل',
+      year: 'سال',
+      month: 'ماه',
+      day: 'روز'
     }
   },
   en: {
@@ -57,7 +61,10 @@ const localesConfig = {
       cancel: 'Cancel',
       now: 'Now',
       nextMonth: 'Next month',
-      prevMonth: 'Previous month'
+      prevMonth: 'Previous month',
+      year: 'Year',
+      month: 'Month',
+      day: 'Day'
     }
   }
 }
@@ -67,6 +74,7 @@ const Core = function(defaultLocaleName, defaultOptions) {
 
   const Instance = {
     moment: moment,
+    momentBase: momentBase,
     locale: { name: 'fa', config: {} },
     localesConfig: {},
     setLocalesConfig: null,
