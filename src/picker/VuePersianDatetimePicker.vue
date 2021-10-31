@@ -394,10 +394,7 @@
                 />
               </transition>
 
-              <template v-if="autoSubmit && !hasStep('t')">
-                <br v-if="!simple" />
-              </template>
-              <div v-else class="vpd-actions">
+              <div v-if="!autoSubmit && hasStep('t')" class="vpd-actions">
                 <slot
                   name="submit-btn"
                   v-bind="{ vm, canSubmit, color, submit, lang }"
